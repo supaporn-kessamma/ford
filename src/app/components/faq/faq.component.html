@@ -1,0 +1,42 @@
+<div class="m-4">
+  <div class="form-group row">
+    <div class="col-sm-5">
+      <input
+        type="search"
+        class="form-control rounded"
+        id="colFormLabel"
+        placeholder="search"
+        [(ngModel)]="searchText"
+        name="searchText"
+      />
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <div class="mx-2 d-inline" *ngFor="let version of versions">
+      <button type="button" class="btn btn-secondary rounded-pill" disabled>
+        {{ version.version }}
+      </button>
+    </div>
+    <hr />
+
+    <div class="row mt-4" *ngFor="let mock of mocks">
+      <ngb-accordion #acc="ngbAccordion" class="mb-4">
+        <ngb-panel>
+          <ng-template ngbPanelTitle class="border-0">
+            {{ mock.Question }}
+          </ng-template>
+          <ng-template ngbPanelContent>
+            {{ mock.And }}
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+
+      <ngb-pagination
+        [(page)]="page"
+        [pageSize]="pageSize"
+        [collectionSize]="versions.length"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

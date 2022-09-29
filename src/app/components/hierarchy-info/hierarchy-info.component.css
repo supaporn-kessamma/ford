@@ -1,0 +1,20 @@
+input select{
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+}
+
+.outline {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: rgb(255, 255, 255);
+}
+
+.no-outline:focus {
+    outline: none;
+}
+
+.bg {
+    background-color: #cddc39;
+}

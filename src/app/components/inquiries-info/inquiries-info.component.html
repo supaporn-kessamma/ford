@@ -1,0 +1,478 @@
+<div class="m-4">
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-1 col-form-label">Booking Id</label>
+    <div class="col-sm-4">
+      <input
+        type="search"
+        class="form-control rounded"
+        id="colFormLabel"
+        placeholder="search"
+        [(ngModel)]="searchText"
+        name="searchText"
+      />
+    </div>
+  </div>
+  <form>
+    <div class="form-group row mt-4">
+      <div class="col-sm-10 mt-2">booking Info</div>
+      <div class="col-sm-2 mb-2">
+        <button
+          type="submit"
+          class="btn btn-outline-secondary px-4"
+          (click)="processData()"
+        >
+          SAVE
+        </button>
+      </div>
+      <hr />
+
+      <label for="colForm" class="col-sm-1 col-form-label">booking Id:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="booking Id"
+          [(ngModel)]="bookingId"
+          name="bookingId"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Booking No:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Booking No"
+          [(ngModel)]="bookingNo"
+          name="bookingNo"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Lead Source:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Lead Source"
+          [(ngModel)]="leadSource"
+          name="leadSource"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Booking Date:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Booking Date"
+          [(ngModel)]="bookingDate"
+          name="bookingDate"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Edited Date:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Edited Date"
+          [(ngModel)]="editedDate"
+          name="editedDate"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Deleted Date:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Deleted Date"
+          [(ngModel)]="deletedDate"
+          name="deletedDate"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Model:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Model"
+          [(ngModel)]="model"
+          name="model"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Body Style:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Body Style"
+          [(ngModel)]="bodyStyle"
+          name="bodyStyle"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Car:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Car"
+          [(ngModel)]="car"
+          name="car"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Exterior:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Exterior"
+          [(ngModel)]="exterior"
+          name="exterior"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Interior:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Interior"
+          [(ngModel)]="interior"
+          name="interior"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Entity Code:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Entity Code"
+          [(ngModel)]="entityCode"
+          name="entityCode"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">MMY:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="MMY"
+          [(ngModel)]="mmy"
+          name="mmy"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">MMY Option:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="MMY Option"
+          [(ngModel)]="mmyOption"
+          name="mmyOption"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Date to Buy:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Date to Buy"
+          [(ngModel)]="dateBuy"
+          name="dateBuy"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label"
+        >Payment Method:</label
+      >
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Payment Method"
+          [(ngModel)]="paymentMethod"
+          name="paymentMethod"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label"
+        >Interest Rate:</label
+      >
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Interest Rate"
+          [(ngModel)]="interestRate"
+          name="interestRate"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">No of month:</label>
+      <div class="col-sm-2 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="No of month"
+          [(ngModel)]="noOfMonth"
+          name="noOfMonth"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Month(s)</label>
+      <label for="colForm" class="col-sm-1 col-form-label">Down Payment:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Down Payment"
+          [(ngModel)]="downPayment"
+          name="downPayment"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">Finance:</label>
+      <div class="col-sm-7 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="Finance"
+          [(ngModel)]="finance"
+          name="finance"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">DMS booking:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="DMS booking"
+          [(ngModel)]="dmsbooking"
+          name="dmsbooking"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">lock/unlock:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline bg"
+          id="colForm"
+          placeholder="lock/unlock"
+          [(ngModel)]="isLock"
+          name="isLock"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">last staff:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="last staff"
+          [(ngModel)]="lastStaff"
+          name="lastStaff"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">status:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="status"
+          [(ngModel)]="status"
+          name="status"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">delivered:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="delivered"
+          [(ngModel)]="delivered"
+          name="delivered"
+        />
+      </div>
+      <label for="colForm" class="col-sm-1 col-form-label">VIN:</label>
+      <div class="col-sm-3 form-group mb-4">
+        <input
+          type="text"
+          class="form-control outline"
+          id="colForm"
+          placeholder="VIN"
+          [(ngModel)]="vin"
+          name="vin"
+        />
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-sm-6 mb-4">enquiry activity info</div>
+        <div class="col-sm-6 mb-4">booking activity info</div>
+        <hr />
+
+        <div class="col-sm-6">
+          <div
+            class="col-sm-12"
+            *ngFor="let enquirie of enquiries; let i = index"
+          >
+            <div class="mb-4">
+              {{ i + 1 }}.
+              <input
+                type="text"
+                class="form-control outline"
+                id="colForm"
+                placeholder="aa"
+                [(ngModel)]="
+                  enquirie.name + ' ' + enquirie.date + ' ' + enquirie.detail
+                "
+                name="enquirie"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-sm-1"
+          style="border-left: 1px solid #000; height: auto"
+        ></div>
+        <div class="col-sm-5">
+          <div
+            class="col-sm-12"
+            *ngFor="let booking of bookings; let i = index"
+          >
+            <div class="mb-4">
+              {{ i + 1 }}.
+              <input
+                type="text"
+                class="form-control outline"
+                id="colForm"
+                placeholder=""
+                [(ngModel)]="
+                  booking.name + ' ' + booking.date + ' ' + booking.detail
+                "
+                name="booking"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-sm-12 mb-4">customer info</div>
+        <hr />
+
+        <label for="colForm" class="col-sm-1 col-form-label">bpid</label>
+        <div class="col-sm-3 form-group mb-4">
+          <input
+            type="text"
+            class="form-control outline"
+            id="colForm"
+            placeholder="bpid"
+            [(ngModel)]="bpid"
+            name="bpid"
+          />
+        </div>
+        <label for="colForm" class="col-sm-1 col-form-label">Name</label>
+        <div class="col-sm-3 form-group mb-4">
+          <input
+            type="text"
+            class="form-control outline"
+            id="colForm"
+            placeholder="Name"
+            [(ngModel)]="name"
+            name="Name"
+          />
+        </div>
+        <label for="colForm" class="col-sm-1 col-form-label">Phone</label>
+        <div class="col-sm-3 form-group mb-4">
+          <input
+            type="text"
+            class="form-control outline"
+            id="colForm"
+            placeholder="Phone"
+            [(ngModel)]="phone"
+            name="Phone"
+          />
+        </div>
+        <label for="colForm" class="col-sm-1 col-form-label">Province</label>
+        <div class="col-sm-3 form-group mb-4">
+          <input
+            type="text"
+            class="form-control outline"
+            id="colForm"
+            placeholder="Province"
+            [(ngModel)]="province"
+            name="Province"
+          />
+        </div>
+        <label for="colForm" class="col-sm-1 col-form-label">Ampher</label>
+        <div class="col-sm-3 form-group mb-4">
+          <input
+            type="text"
+            class="form-control outline"
+            id="colForm"
+            placeholder="Ampher"
+            [(ngModel)]="ampher"
+            name="Ampher"
+          />
+        </div>
+        <label for="colForm" class="col-sm-1 col-form-label">Tambol</label>
+        <div class="col-sm-3 form-group mb-4">
+          <input
+            type="text"
+            class="form-control outline"
+            id="colForm"
+            placeholder="Tambol"
+            [(ngModel)]="tambol"
+            name="Tambol"
+          />
+        </div>
+        <label for="colForm" class="col-sm-1 col-form-label">Soi</label>
+        <div class="col-sm-3 form-group mb-4">
+          <input
+            type="text"
+            class="form-control outline"
+            id="colForm"
+            placeholder="Soi"
+            [(ngModel)]="soi"
+            name="Soi"
+          />
+        </div>
+        <label for="colForm" class="col-sm-1 col-form-label">Road</label>
+        <div class="col-sm-3 form-group mb-4">
+          <input
+            type="text"
+            class="form-control outline"
+            id="colForm"
+            placeholder="Road"
+            [(ngModel)]="road"
+            name="Road"
+          />
+        </div>
+        <label for="colForm" class="col-sm-1 col-form-label">Post code</label>
+        <div class="col-sm-3 form-group mb-4">
+          <input
+            type="text"
+            class="form-control outline"
+            id="colForm"
+            placeholder="Post code"
+            [(ngModel)]="postCode"
+            name="Post code"
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
